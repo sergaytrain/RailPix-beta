@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,15 +12,78 @@
             box-sizing: border-box;
           }
           .main img{width: 100%;}
+          .beta{
+            width: 450px;
+            background-color: coral;
+            border-radius: 5px;
+            text-align: center;
+            height: 100px;
+          }
+          .beta h1{
+            margin-top: 10px;
+          }
+          .penis{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+          }
+          .photos{
+            text-align: center;
+            margin-top: 25px;
+          }
+          .photos a{
+            text-decoration: none;
+            color: black;
+          }
+          .podval{
+            text-align: center;
+            margin-top: 15%;
+          }
+          
+          /* Стиль для мобильной версии */
+          @media only screen and (max-width: 767px) {
+            .main img.mobile-img {
+              display: block;
+            }
+            .main img.desktop-img {
+              display: none;
+            }
+            .beta {
+              width: 98%; /* Уменьшаем ширину на 2% от исходной (450px) */
+              max-width: 441px; /* 450px - 2% = 441px */
+            }
+          }
+          
+          @media only screen and (min-width: 768px) {
+            .main img.mobile-img {
+              display: none;
+            }
+            .main img.desktop-img {
+              display: block;
+            }
+          }
     </style>
 </head>
 <body>
     <div class="main">
-        <a href="index.html"><img src="Frame 2.png" alt=""></a>
+        <a href="index.html">
+            <img src="Frame 2.png" alt="" class="desktop-img">
+            <img src="Frame 3.png" alt="" class="mobile-img">
+        </a>
     </div>
-    <div class="beta">
-        <h1>Внимание, сайт в бета тесте.</h1>
-        <p>Внимание, сайт в бета тесте.<br>Если есть вопросы или баги,<br>обратится за помощью сюда > <a href="telegram_support.html">RailPix поддержка</a></p>
+    <div class="penis">
+        <div class="beta">
+            <h1>Внимание, сайт в бета тесте.</h1>
+            <p>Внимание, сайт в бета тесте.<br>Если есть вопросы или баги,<br>обратится за помощью сюда > <a href="telegram_support.html">RailPix поддержка</a></p>
+        </div>
+    </div>
+    <div class="photos">
+        <h2>Туториал по загрузке фото > <a href="uploadphoto.html">Просмотр (клик)</a></h2>
+        <p>Фото появятся после проверки модератором.</p>
+    </div>
+    <div class="podval">
+        <h2>2025, Все права защещены, RailPix.</h2>
+        <p>by <a href="https://www.tiktok.com/@sergaytrain">sergaytrain</a> and <a href="https://www.tiktok.com/@rzd.omskiy">RZD.omskiy</a></p>
     </div>
 </body>
 </html>
