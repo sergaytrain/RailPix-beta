@@ -1,89 +1,161 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <style>
-           * {
-            font-family: "Montserrat", sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-          .main img{width: 100%;}
-          .beta{
-            width: 450px;
-            background-color: coral;
-            border-radius: 5px;
-            text-align: center;
-            height: 100px;
-          }
-          .beta h1{
-            margin-top: 10px;
-          }
-          .penis{
-            display: flex;
-            justify-content: center;
-            width: 100%;
-          }
-          .photos{
-            text-align: center;
-            margin-top: 25px;
-          }
-          .photos a{
-            text-decoration: none;
-            color: black;
-          }
-          .podval{
-            text-align: center;
-            margin-top: 15%;
-          }
-          
-          /* Стиль для мобильной версии */
-          @media only screen and (max-width: 767px) {
-            .main img.mobile-img {
-              display: block;
-            }
-            .main img.desktop-img {
-              display: none;
-            }
-            .beta {
-              width: 98%; /* Уменьшаем ширину на 2% от исходной (450px) */
-              max-width: 441px; /* 450px - 2% = 441px */
-            }
-          }
-          
-          @media only screen and (min-width: 768px) {
-            .main img.mobile-img {
-              display: none;
-            }
-            .main img.desktop-img {
-              display: block;
-            }
-          }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RailPix</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+    * {
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f9f9f9, #eceff4);
+      color: #222;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Шапка */
+    .main img {
+      width: 100%;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .main img:hover {
+      transform: scale(1.02) rotateX(3deg) rotateY(3deg);
+    }
+
+    /* Блок уведомления */
+    .penis {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .beta {
+      width: 450px;
+      background: linear-gradient(145deg, coral, tomato);
+      border-radius: 15px;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transform: perspective(1000px) rotateX(0deg);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .beta:hover {
+      transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) scale(1.03);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    .beta h1 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .beta a {
+      color: #ffe;
+      text-decoration: underline;
+    }
+
+    /* Туториалы */
+    .photos {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .photos h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .photos a {
+      text-decoration: none;
+      color: #ff5722;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .photos a:hover {
+      color: #e64a19;
+    }
+
+    /* Подвал */
+    .podval {
+      text-align: center;
+      margin-top: 80px;
+      padding: 30px 10px;
+      background: #111;
+      color: #eee;
+      border-radius: 20px 20px 0 0;
+      box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
+    }
+
+    .podval a {
+      color: #ff8a65;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .podval a:hover {
+      color: #ff7043;
+    }
+
+    /* Адаптив */
+    @media only screen and (max-width: 767px) {
+      .main img.mobile-img { display: block; }
+      .main img.desktop-img { display: none; }
+      .beta { width: 95%; max-width: 441px; }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .main img.mobile-img { display: none; }
+      .main img.desktop-img { display: block; }
+    }
+  </style>
 </head>
 <body>
-    <div class="main">
-        <a href="index.html">
-            <img src="Frame 2.png" alt="" class="desktop-img">
-            <img src="Frame 3.png" alt="" class="mobile-img">
-        </a>
+  <div class="main">
+    <a href="index.html">
+      <img src="Frame 2.png" alt="" class="desktop-img">
+      <img src="Frame 3.png" alt="" class="mobile-img">
+    </a>
+  </div>
+
+  <div class="penis">
+    <div class="beta">
+      <h1>⚠️ Сайт в бета-тесте</h1>
+      <p>
+        Если есть вопросы или баги, обратитесь сюда → 
+        <a href="telegram_support.html">RailPix поддержка</a>
+      </p>
     </div>
-    <div class="penis">
-        <div class="beta">
-            <h1>Внимание, сайт в бета тесте.</h1>
-            <p>Внимание, сайт в бета тесте.<br>Если есть вопросы или баги,<br>обратится за помощью сюда > <a href="telegram_support.html">RailPix поддержка</a></p>
-        </div>
-    </div>
-    <div class="photos">
-        <h2>Туториал по загрузке фото > <a href="uploadphoto.html">Просмотр (клик)</a></h2>
-        <p>Фото появятся после проверки модератором.</p>
-    </div>
-    <div class="podval">
-        <h2>2025, Все права защещены, RailPix.</h2>
-        <p>by <a href="https://www.tiktok.com/@sergaytrain">sergaytrain</a> and <a href="https://www.tiktok.com/@rzd.omskiy">RZD.omskiy</a></p>
-    </div>
+  </div>
+
+  <div class="photos">
+    <h2>📷 Туториал по загрузке фото → 
+      <a href="uploadphoto.html">Просмотр</a>
+    </h2>
+    <p>Фото появятся после проверки модератором.</p>
+  </div>
+
+  <div class="podval">
+    <h2>© 2025, RailPix. Все права защищены.</h2>
+    <p>by 
+      <a href="https://www.tiktok.com/@sergaytrain">sergaytrain</a> 
+      and 
+      <a href="https://www.tiktok.com/@rzd.omskiy">RZD.omskiy</a>
+    </p>
+  </div>
 </body>
 </html>
